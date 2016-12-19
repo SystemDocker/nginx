@@ -1,0 +1,9 @@
+[Unit]
+Description=NGINX Web Server
+
+[Service]
+# SystemDocker configuration
+Environment='DOCKER_IMAGE=nginx:stable-alpine'
+
+# Setup the volumes
+Environment='DOCKER_VOLUME_USR_SHARE_NGINX_HTML=/srv/docker/nginx/instance/%i/html:/usr/share/nginx/html:ro'
